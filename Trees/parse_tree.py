@@ -62,6 +62,7 @@ def buildParseTree(fpexp):
 
 		else:
 			raise ValueError
+	print 'eTee root:  {} '.format(eTree.getRootVal())
 	return eTree
 
 
@@ -79,7 +80,13 @@ def evaluate(parseTree):
 
 
 pt = buildParseTree("( ( 10 + 5 ) * 3 )")
-pt.postorder()  
+print '-----------------'
+pt.postorder() 
+print '-----------------'
+pt.preorder()  
+print '-----------------'
+pt.inorder()
+print '-----------------'
 print evaluate(pt)
 
 
