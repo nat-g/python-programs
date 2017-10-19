@@ -57,3 +57,19 @@ height of the tree (again, that's O(lgn) if the tree is balanced,
 O(n) otherwise). O(1) space.
 """
 
+root_1 = BinaryTree(4)
+root_1.left = BinaryTree(2)
+root_1.right = BinaryTree(5)
+root_1.left.left = BinaryTree(1)
+root_1.left.right = BinaryTree(3)
+
+print find_second_largest(root_1)
+
+import unittest
+
+class TestBst(unittest.TestCase):
+    def test_none(self):
+        self.assertTrue(find_second_largest(None))
+
+if __name__ == '__main__':
+    unittest.main()
